@@ -5,12 +5,13 @@ from threading import Thread
 import uuid
 import logging
 from datetime import datetime
+import os
 
 # شناسه ادمین
 ADMIN_ID = 6410680572  # شناسه‌ی تلگرام شما
 
-# توکن رباتت
-TOKEN = "7789250343:AAH1Pe07C9vavUXnofpmmzDsRmqp977CeIk"  # توکن جدید شما
+TOKEN = os.getenv("TOKEN")
+
 bot = telebot.TeleBot(TOKEN)
 
 # سرور Flask برای نگه داشتن ربات فعال
